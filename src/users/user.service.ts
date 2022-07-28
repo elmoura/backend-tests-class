@@ -1,5 +1,5 @@
 import { User } from "../database/entities/user.entity";
-import { UserRepository } from "../database/user.repository"
+import { UserRepository } from "../database/repositories/user.repository"
 
 export type CreateUserInput = { email: string }
 
