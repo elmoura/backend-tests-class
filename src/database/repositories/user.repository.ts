@@ -9,6 +9,12 @@ export class UserRepository {
     this.usersConnection = dataSource.getRepository(User);
   }
 
+  findByEmail = async (email: string): Promise<User | null> => {
+    return this.usersConnection.findOne({
+      where: { email }
+    })
+  }
+
   findById = async (userId: string): Promise<User | null> => {
     return this.usersConnection.findOne({
       where: { id: userId },
